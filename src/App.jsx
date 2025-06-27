@@ -72,12 +72,15 @@ let newTodos = todos.filter(item => {
   return (
     <>
       <Navbar />
-      <div className=' text-white w-full font-bold container mx-auto p-10 min-h-[70vh] bg-slate-600 rounded-xl my-3 mb-5'>
-        <div className='main mb-4 ' >
-          <h1 className=' text-cyan-100 text-4xl  mb-0 flex justify-center' > Add a Todo</h1>
-          <div className='bg-gray-500 mx-auto h-0.5 w-[17%] mb-16'></div>
-           <input onChange={handleChange} value={todo} type="text" placeholder='....todo-name....' className="my-2 flex mx-auto w-[70%] py-1 text-black text-center focus:outline-none rounded-lg" />
-             <button onClick={handleAdd} disabled={todo.length<=3} className='bg-gray-800 py-1 px-6 w-[300px] mx-auto flex justify-center text-white rounded-lg disabled:bg-slate-700 hover:bg-amber-300 '  >Save</button>
+      <div className=' text-white  font-bold container w-[70vw] mx-auto p-10 min-h-[70vh] bg-slate-600 rounded-xl my-3 mb-5'>
+        <div className='main mb-4 mt-4 flex items-center mx-0 ' >
+          <div className='mx-10'>
+          <h1 className=' text-slate-500 text-4xl  mb-0 flex justify-center items-center' > Add a Todo</h1>
+         </div> {/* <div className='bg-gray-500 mx-auto h-0.5 w-[17%] mb-16'>bjb</div> */}
+          <div className='flex flex-row items-center gap-4 '>
+           <input onChange={handleChange} value={todo} type="text" placeholder='....todo-name....' className="my-2 flex mx-auto w-[300px] py-4 text-black text-center focus:outline-none rounded-lg" />
+             <button onClick={handleAdd} disabled={todo.length<=3} className='bg-gray-800 w-[150px] mx-auto flex  text-white rounded-lg disabled:bg-slate-700 hover:bg-amber-300  justify-center items-center text-3xl h-14 '  >Save</button>
+        </div>
         </div>
                <div className='save'>
                 <div className='flex text-4xl  gap-5'>
